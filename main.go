@@ -1,16 +1,10 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
+	"go_gin_gorm_rest/db"
 )
 
 func main() {
-	engine := gin.Default()
-	engine.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "hello world",
-		})
-	})
-	engine.Run(":3000")
+	db.Init()
+	db.Close()
 }

@@ -5,7 +5,6 @@ services:
     build:
       context: .
     tty: true
-    command: go run main.go
     volumes:
       - ./:/app
     ports:

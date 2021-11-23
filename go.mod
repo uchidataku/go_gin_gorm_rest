@@ -3,7 +3,7 @@ module go_gin_gorm_rest
 go 1.17
 
 require (
-	github.com/gin-gonic/gin v1.7.5
+	github.com/gin-gonic/gin v1.7.4
 	github.com/jinzhu/gorm v1.9.16
 )
 

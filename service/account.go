@@ -6,12 +6,11 @@ import (
 	"go_gin_gorm_rest/entity"
 )
 
-type Service struct {
-}
+type Service struct{}
 
 type Account entity.Account
 
-func (s Service) GetAccountAll() ([]Account, error) {
+func (s Service) GetAllAccount() ([]Account, error) {
 	db := db.GetDB()
 	var a []Account
 

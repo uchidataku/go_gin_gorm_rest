@@ -13,6 +13,17 @@ func Init() {
 func router() *gin.Engine {
 	r := gin.Default()
 
+	r.GET("/ping", func(cc *gin.Context) {
+		cc.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+
+	auth := r.Group("/auth")
+	{
+		auth.POST("/login", controller.Login)
+	}
+
 	a := r.Group("/accounts")
 	{
 		ctrl := controller.Controller{}
